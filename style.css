@@ -1,49 +1,91 @@
-
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f9f9f9;
+  background: #f7f9fc;
   color: #222;
 }
 header {
   background-color: #111;
   color: #fff;
-  padding: 10px;
+  padding: 20px;
   text-align: center;
 }
 .logo {
-  height: 50px;
+  height: 60px;
   vertical-align: middle;
 }
+.tagline {
+  font-size: 16px;
+  color: #bbb;
+}
 main {
+  padding: 30px 20px;
+}
+.hero {
   text-align: center;
-  padding: 20px;
+  margin-bottom: 50px;
 }
 .qr-image {
-  width: 200px;
+  width: 220px;
   margin: 20px 0;
 }
 button {
-  padding: 12px 25px;
+  padding: 14px 30px;
   background-color: #222;
   color: #fff;
+  font-size: 16px;
   border: none;
   cursor: pointer;
+  border-radius: 4px;
 }
 button:hover {
   background-color: #444;
+}
+.features {
+  margin-top: 50px;
+}
+.features h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.feature-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.feature {
+  background-color: #fff;
+  padding: 20px;
+  width: 280px;
+  margin: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+.about {
+  margin-top: 50px;
+  text-align: center;
+}
+.about p {
+  max-width: 600px;
+  margin: auto;
+  font-size: 16px;
+  line-height: 1.6;
 }
 footer {
   background-color: #111;
   color: #fff;
   text-align: center;
-  padding: 10px;
-  position: relative;
-  bottom: 0;
-  width: 100%;
+  padding: 20px;
+  margin-top: 40px;
 }
 footer a {
   color: #bbb;
   text-decoration: none;
+}
+@media (max-width: 768px) {
+  .feature-box {
+    flex-direction: column;
+    align-items: center;
+  }
 }
