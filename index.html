@@ -10,28 +10,62 @@
   <header>
     <img src="assets/logo.png" alt="Logo" class="logo">
     <h1>THE HIGH COURT</h1>
+    <p class="tagline">Trusted Legal & Digital Services</p>
   </header>
+
   <main>
-    <h2>Secure Payment Portal</h2>
-    <p>Scan the QR code below or use the button to proceed with payment.</p>
-    <img src="assets/qr.png" alt="QR Code" class="qr-image">
-    <button id="payBtn">Pay Now</button>
+    <section class="hero">
+      <h2>Make Secure Payments with Confidence</h2>
+      <p>Instant, safe, and verified transactions through our Razorpay integration.</p>
+      <img src="assets/qr.png" alt="QR Code" class="qr-image">
+      <button id="payBtn">Pay Now</button>
+    </section>
+
+    <section class="features">
+      <h2>Why Choose Us?</h2>
+      <div class="feature-box">
+        <div class="feature">
+          <h3>🔐 Secure Gateway</h3>
+          <p>End-to-end encrypted payment solutions for all users.</p>
+        </div>
+        <div class="feature">
+          <h3>📞 24/7 Support</h3>
+          <p>Help is always available via chat or call.</p>
+        </div>
+        <div class="feature">
+          <h3>⚡ Instant Confirmations</h3>
+          <p>Get notified the moment your payment is successful.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about">
+      <h2>About THE HIGH COURT</h2>
+      <p>We offer reliable digital payment services that bridge legal solutions with modern tech. Trusted by thousands, we ensure your transactions are fast, transparent, and secure.</p>
+    </section>
   </main>
+
   <footer>
-    <p>&copy; 2025 THE HIGH COURT | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms</a> | <a href="refund.html">Refund</a> | <a href="contact.html">Contact</a></p>
+    <p>&copy; 2025 THE HIGH COURT | 
+      <a href="privacy.html">Privacy Policy</a> | 
+      <a href="terms.html">Terms</a> | 
+      <a href="refund.html">Refund</a> | 
+      <a href="contact.html">Contact</a>
+    </p>
   </footer>
+
   <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
   <script>
     document.getElementById('payBtn').onclick = function () {
       var options = {
-        key: "rzp_test_G6Cq5wP6xN6qPU",
-        amount: 50000,
+        key: "rzp_test_G6Cq5wP6xN6qPU", // <-- Razorpay TEST key
+        amount: 50000, // Rs. 500
         currency: "INR",
         name: "THE HIGH COURT",
         description: "Secure Payment",
         image: "assets/logo.png",
         handler: function (response) {
-          alert('Payment successful');
+          alert('✅ Payment successful!');
         },
         prefill: {
           name: "",
