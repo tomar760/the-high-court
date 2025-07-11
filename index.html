@@ -3,84 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>The High Court</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
-      color: #333;
-    }
-    header {
-      background-color: #2c3e50;
-      padding: 20px;
-      text-align: center;
-      color: white;
-    }
-    nav {
-      background-color: #34495e;
-      padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
-    .container {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
-      background: white;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      border-radius: 8px;
-    }
-    .button {
-      background-color: #27ae60;
-      color: white;
-      padding: 15px 30px;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
-      margin-top: 20px;
-    }
-    footer {
-      background-color: #2c3e50;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      margin-top: 50px;
-    }
-  </style>
+  <title>THE HIGH COURT – Secure Payment</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-<header>
-  <h1>Welcome to The High Court</h1>
-  <p>Secure Digital Services | Trusted Payments</p>
-</header>
-
-<nav>
-  <a href="contact.html">Contact</a>
-  <a href="privacy.html">Privacy Policy</a>
-  <a href="terms.html">Terms</a>
-  <a href="refund.html">Refund</a>
-  <a href="shipping.html">Shipping</a>
-</nav>
-
-<div class="container">
-  <h2>Make a Payment</h2>
-  <p>Please click the button below to proceed with your secure payment. You will be redirected to the Razorpay interface.</p>
-  <button class="button" onclick="window.location.href='https://rzp.io/l/YOUR-LINK-HERE'">Pay Now</button>
-  <!-- Replace YOUR-LINK-HERE with your actual Razorpay payment link -->
-</div>
-
-<footer>
-  <p>Support: thehighcourt.help@gmail.com | +91-6351639441</p>
-  <p>&copy; 2025 The High Court. All Rights Reserved.</p>
-</footer>
-
+  <header>
+    <img src="assets/logo.png" alt="Logo" class="logo">
+    <h1>THE HIGH COURT</h1>
+  </header>
+  <main>
+    <h2>Secure Payment Portal</h2>
+    <p>Scan the QR code below or use the button to proceed with payment.</p>
+    <img src="assets/qr.png" alt="QR Code" class="qr-image">
+    <button id="payBtn">Pay Now</button>
+  </main>
+  <footer>
+    <p>&copy; 2025 THE HIGH COURT | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms</a> | <a href="refund.html">Refund</a> | <a href="contact.html">Contact</a></p>
+  </footer>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script>
+    document.getElementById('payBtn').onclick = function () {
+      var options = {
+        key: "rzp_test_G6Cq5wP6xN6qPU",
+        amount: 50000,
+        currency: "INR",
+        name: "THE HIGH COURT",
+        description: "Secure Payment",
+        image: "assets/logo.png",
+        handler: function (response) {
+          alert('Payment successful');
+        },
+        prefill: {
+          name: "",
+          email: "",
+          contact: ""
+        },
+        theme: {
+          color: "#2e2e2e"
+        }
+      };
+      var rzp1 = new Razorpay(options);
+      rzp1.open();
+    }
+  </script>
 </body>
 </html>
