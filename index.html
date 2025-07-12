@@ -5,23 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>THE HIGH COURT – Secure Payment</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
+  <header class="header">
     <img src="assets/logo.png" alt="Logo" class="logo">
-    <h1>THE HIGH COURT</h1>
-    <p class="tagline">Trusted Legal & Digital Services</p>
+    <div>
+      <h1>THE HIGH COURT</h1>
+      <p class="tagline">Trusted Legal & Digital Services</p>
+    </div>
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero fade-in">
       <h2>Make Secure Payments with Confidence</h2>
       <p>Instant, safe, and verified transactions through our Razorpay integration.</p>
-      <img src="assets/qr.png" alt="QR Code" class="qr-image">
-      <button id="payBtn" class="animated-button">Pay Now</button>
+      <div class="qr-box">
+        <img src="assets/qr.png" alt="QR Code" class="qr-image">
+      </div>
+      <button id="payBtn" class="animated-btn">💳 Pay Now</button>
     </section>
 
-    <section class="features">
+    <section class="features fade-in">
       <h2>Why Choose Us?</h2>
       <div class="feature-box">
         <div class="feature">
@@ -39,44 +44,113 @@
       </div>
     </section>
 
-    <section class="about">
-      <h2>About THE HIGH COURT</h2>
-      <p>We offer reliable digital payment services that bridge legal solutions with modern tech. Trusted by thousands, we ensure your transactions are fast, transparent, and secure.</p>
-    </section>
-
-    <section class="events">
-      <h2>Upcoming Events</h2>
+    <section class="services fade-in">
+      <h2>Our Services</h2>
       <ul>
-        <li>📅 Legal Awareness Seminar – 20th Aug</li>
-        <li>🧾 Digital Payment Training – 25th Aug</li>
-        <li>📌 Client Onboarding Webinar – 28th Aug</li>
+        <li>✅ Legal Documentation & Filing</li>
+        <li>✅ Court Case Consultancy</li>
+        <li>✅ Contract Drafting</li>
+        <li>✅ Digital Signature Issuance</li>
+        <li>✅ Certified Translation</li>
+        <li>✅ Notary & Affidavit Services</li>
       </ul>
     </section>
 
-    <section class="testimonials">
-      <h2 class="section-title">What Our Clients Say</h2>
-      <div class="testimonial-box">
-        <div class="testimonial fade-in">
-          <p>"Very professional and quick service. Payment process was smooth and secure."</p>
-          <h4>- Rohan Mehta</h4>
+    <section class="testimonials fade-in">
+      <h2>What Our Clients Say</h2>
+      <div class="testimonial-slider">
+        <div class="testimonial">
+          <p>"Super smooth experience. Fully secure."</p>
+          <h4>- Rajiv M., Delhi</h4>
         </div>
-        <div class="testimonial fade-in" style="animation-delay: 0.5s;">
-          <p>"I was impressed by how easy it was to make the payment. Highly recommend THE HIGH COURT."</p>
-          <h4>- Sneha Kapoor</h4>
+        <div class="testimonial">
+          <p>"I trust THE HIGH COURT for all my legal needs."</p>
+          <h4>- Sneha P., Mumbai</h4>
         </div>
-        <div class="testimonial fade-in" style="animation-delay: 1s;">
-          <p>"Excellent support team. Solved my query in minutes. Will use again!"</p>
-          <h4>- Aarav Singh</h4>
+        <div class="testimonial">
+          <p>"Fast service and excellent support."</p>
+          <h4>- Aarav S., Bangalore</h4>
         </div>
       </div>
     </section>
+
+    <section class="events fade-in">
+      <h2>Our Events</h2>
+      <div class="event-timeline">
+        <div class="event">
+          <h4>Free Legal Camp – April 2025</h4>
+          <p>Served 300+ citizens with legal support & document checks.</p>
+        </div>
+        <div class="event">
+          <h4>Startup Compliance Webinar – May 2025</h4>
+          <p>Guided 50+ startups through legal registrations and GST filings.</p>
+        </div>
+        <div class="event">
+          <h4>Digital Payment Workshop – June 2025</h4>
+          <p>Trained individuals and MSMEs on secure Razorpay transactions.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter fade-in">
+      <h2>📩 Subscribe to Our Legal Newsletter</h2>
+      <p>Stay informed about legal news, events, and exclusive offers.</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+
+    <section class="faq fade-in">
+      <h2>❓ Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <h4>How secure is the payment?</h4>
+          <p>All payments are 100% secure and encrypted through Razorpay’s gateway.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Can I get a refund?</h4>
+          <p>Yes, we follow a transparent 7-day refund policy. See our Refund page.</p>
+        </div>
+        <div class="faq-item">
+          <h4>How do I contact support?</h4>
+          <p>You can contact us via email or phone on the Contact page.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="team fade-in">
+      <h2>👥 Meet Our Team</h2>
+      <div class="team-grid">
+        <div class="member">
+          <img src="assets/logo.png" alt="Member">
+          <h4>Adv. Rahul S.</h4>
+          <p>Senior Legal Advisor</p>
+        </div>
+        <div class="member">
+          <img src="assets/logo.png" alt="Member">
+          <h4>Shruti Mehta</h4>
+          <p>Client Relations Manager</p>
+        </div>
+        <div class="member">
+          <img src="assets/logo.png" alt="Member">
+          <h4>Arjun Patel</h4>
+          <p>Digital Services Lead</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about fade-in">
+      <h2>About THE HIGH COURT</h2>
+      <p>We offer reliable digital payment services that bridge legal solutions with modern tech. Trusted by thousands, we ensure your transactions are fast, transparent, and secure.</p>
+    </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 THE HIGH COURT | 
-      <a href="privacy.html">Privacy Policy</a> | 
-      <a href="terms.html">Terms</a> | 
-      <a href="refund.html">Refund</a> | 
+  <footer class="fade-in">
+    <p>&copy; 2025 THE HIGH COURT |
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="terms.html">Terms</a> |
+      <a href="refund.html">Refund</a> |
       <a href="contact.html">Contact</a>
     </p>
   </footer>
@@ -105,7 +179,17 @@
       };
       var rzp1 = new Razorpay(options);
       rzp1.open();
-    }
+    };
+
+    // Testimonial auto-slider
+    let index = 0;
+    setInterval(() => {
+      const testimonials = document.querySelectorAll('.testimonial');
+      testimonials.forEach((el, i) => {
+        el.style.display = i === index ? 'block' : 'none';
+      });
+      index = (index + 1) % testimonials.length;
+    }, 4000);
   </script>
 </body>
 </html>
