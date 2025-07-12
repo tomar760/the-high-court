@@ -5,24 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>THE HIGH COURT – Secure Payment</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-  <header data-aos="fade-down">
+  <header>
     <img src="assets/logo.png" alt="Logo" class="logo">
     <h1>THE HIGH COURT</h1>
     <p class="tagline">Trusted Legal & Digital Services</p>
   </header>
 
   <main>
-    <section class="hero" data-aos="zoom-in">
+    <section class="hero">
       <h2>Make Secure Payments with Confidence</h2>
       <p>Instant, safe, and verified transactions through our Razorpay integration.</p>
       <img src="assets/qr.png" alt="QR Code" class="qr-image">
-      <button id="payBtn">💳 Pay Now</button>
+      <button id="payBtn" class="animated-btn">Pay Now</button>
     </section>
 
-    <section class="features" data-aos="fade-up">
+    <section class="features">
       <h2>Why Choose Us?</h2>
       <div class="feature-box">
         <div class="feature">
@@ -40,27 +39,22 @@
       </div>
     </section>
 
-    <section class="about" data-aos="fade-up">
+    <section class="events">
+      <h2>Upcoming Events</h2>
+      <ul>
+        <li><strong>25 July 2025:</strong> Legal Aid Workshop (Delhi)</li>
+        <li><strong>2 August 2025:</strong> Online Legal Consultancy Drive</li>
+        <li><strong>10 August 2025:</strong> Awareness Program for Cyber Laws</li>
+      </ul>
+    </section>
+
+    <section class="about">
       <h2>About THE HIGH COURT</h2>
       <p>We offer reliable digital payment services that bridge legal solutions with modern tech. Trusted by thousands, we ensure your transactions are fast, transparent, and secure.</p>
     </section>
-
-    <section class="testimonials" data-aos="fade-up">
-      <h2>What Our Clients Say</h2>
-      <div class="testimonial-box">
-        <div class="testimonial">
-          <p>"Super smooth and fast!"</p>
-          <h4>— Raj Malhotra</h4>
-        </div>
-        <div class="testimonial">
-          <p>"Highly secure & trusted platform."</p>
-          <h4>— Neha Kapoor</h4>
-        </div>
-      </div>
-    </section>
   </main>
 
-  <footer data-aos="fade-up">
+  <footer>
     <p>&copy; 2025 THE HIGH COURT | 
       <a href="privacy.html">Privacy Policy</a> | 
       <a href="terms.html">Terms</a> | 
@@ -82,6 +76,11 @@
         handler: function (response) {
           alert('✅ Payment successful!');
         },
+        prefill: {
+          name: "",
+          email: "",
+          contact: ""
+        },
         theme: {
           color: "#2e2e2e"
         }
@@ -89,13 +88,6 @@
       var rzp1 = new Razorpay(options);
       rzp1.open();
     }
-  </script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 1000,
-      once: true
-    });
   </script>
 </body>
 </html>
