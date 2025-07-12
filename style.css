@@ -1,124 +1,156 @@
-body {
+* {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #f5f5f5;
-  color: #222;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+  color: #333;
 }
 
 header {
+  background-color: #2e2e2e;
+  color: #fff;
   text-align: center;
-  background: #121212;
-  color: white;
-  padding: 30px 20px;
+  padding: 2rem 1rem;
+  position: relative;
 }
 
 .logo {
   width: 80px;
-  height: auto;
-  margin-bottom: 10px;
+  position: absolute;
+  top: 15px;
+  left: 20px;
 }
 
 .tagline {
   font-style: italic;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #ccc;
+}
+
+main {
+  padding: 2rem;
+  max-width: 1100px;
+  margin: auto;
 }
 
 .hero {
   text-align: center;
-  padding: 40px 20px;
-  background: #ffffff;
-}
-
-.hero h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
 
 .qr-image {
-  width: 200px;
-  border: 5px solid #e0e0e0;
-  border-radius: 16px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-  margin-bottom: 20px;
+  width: 250px;
+  height: 250px;
+  border: 6px solid #2e2e2e;
+  border-radius: 12px;
+  margin: 20px 0;
 }
 
-#payBtn {
-  padding: 14px 32px;
-  font-size: 18px;
-  font-weight: bold;
-  background: linear-gradient(135deg, #00c6ff, #0072ff);
+.animated-btn {
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  background-color: #2e2e2e;
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 14px rgba(0, 114, 255, 0.4);
+  animation: pulse 2s infinite;
 }
 
-#payBtn:hover {
+.animated-btn:hover {
+  background-color: #444;
   transform: scale(1.05);
-  background: linear-gradient(135deg, #0072ff, #00c6ff);
-  box-shadow: 0 8px 18px rgba(0, 114, 255, 0.6);
 }
 
-.features, .about, .testimonials {
-  padding: 40px 20px;
-  background: #f9f9f9;
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(46, 46, 46, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(46, 46, 46, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(46, 46, 46, 0); }
 }
 
-.features h2, .about h2, .testimonials h2 {
-  text-align: center;
-  margin-bottom: 20px;
+.features, .about, .events {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+}
+
+.features h2, .about h2, .events h2 {
+  margin-bottom: 1rem;
+  color: #2e2e2e;
 }
 
 .feature-box {
   display: flex;
-  justify-content: center;
-  gap: 30px;
   flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
 }
 
 .feature {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  width: 250px;
-  text-align: center;
+  flex: 1;
+  min-width: 250px;
+  background-color: #fafafa;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
 }
 
-.testimonial-box {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
+.events ul {
+  list-style: none;
+  padding-left: 0;
 }
 
-.testimonial {
-  background: white;
-  padding: 20px;
-  border-left: 5px solid #0072ff;
-  border-radius: 10px;
-  width: 300px;
-  font-style: italic;
+.events li {
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
 }
 
 footer {
+  background-color: #2e2e2e;
+  color: #fff;
+  padding: 1rem;
   text-align: center;
-  background: #121212;
-  color: white;
-  padding: 20px;
-  font-size: 0.9rem;
 }
 
 footer a {
-  color: #00c6ff;
-  margin: 0 10px;
+  color: #ccc;
   text-decoration: none;
+  margin: 0 5px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .feature-box {
+    flex-direction: column;
+  }
+
+  .logo {
+    position: static;
+    margin-bottom: 10px;
+  }
+
+  header {
+    padding: 3rem 1rem 2rem 1rem;
+  }
+
+  .qr-image {
+    width: 200px;
+    height: 200px;
+  }
 }
