@@ -8,7 +8,7 @@
 </head>
 <body>
   <header>
-    <img src="assets/logo.png" alt="Logo" class="logo">
+    <img src="logo.png" alt="Logo" class="logo">
     <h1>THE HIGH COURT</h1>
     <p class="tagline">Trusted Legal & Digital Services</p>
   </header>
@@ -17,7 +17,9 @@
     <section class="hero">
       <h2>Make Secure Payments with Confidence</h2>
       <p>Instant, safe, and verified transactions through our Razorpay integration.</p>
-      <img src="assets/qr.png" alt="QR Code" class="qr-image">
+      <div class="qr-wrapper">
+        <img src="qr.png" alt="QR Code" class="qr-image">
+      </div>
       <button id="payBtn">Pay Now</button>
     </section>
 
@@ -37,6 +39,24 @@
           <p>Get notified the moment your payment is successful.</p>
         </div>
       </div>
+    </section>
+
+    <section class="services">
+      <h2>Our Services</h2>
+      <ul>
+        <li>Legal Document Assistance</li>
+        <li>Digital Signature Support</li>
+        <li>Online Court Filing</li>
+        <li>Consultation Scheduling</li>
+        <li>Payment Dispute Help</li>
+      </ul>
+    </section>
+
+    <section class="testimonials">
+      <h2>Client Reviews</h2>
+      <blockquote>"Fast service and reliable support. Thank you!" – <strong>Rohit Mehta</strong></blockquote>
+      <blockquote>"Highly recommended. Safe and smooth transactions!" – <strong>Anjali Verma</strong></blockquote>
+      <blockquote>"Best digital legal service I've used." – <strong>Pranav Shah</strong></blockquote>
     </section>
 
     <section class="about">
@@ -59,11 +79,11 @@
     document.getElementById('payBtn').onclick = function () {
       var options = {
         key: "rzp_test_G6Cq5wP6xN6qPU", // <-- Razorpay TEST key
-        amount: 50000, // Rs. 500
+        amount: 50000, // Rs. 500 in paisa
         currency: "INR",
         name: "THE HIGH COURT",
         description: "Secure Payment",
-        image: "assets/logo.png",
+        image: "logo.png",
         handler: function (response) {
           alert('✅ Payment successful!');
         },
@@ -82,4 +102,3 @@
   </script>
 </body>
 </html>
-king
