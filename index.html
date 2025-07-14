@@ -24,9 +24,6 @@
       <button id="payBtn" class="animated-btn">💳 Pay Now</button>
     </section>
 
-    <!-- Keep your same sections below (unchanged) -->
-    <!-- Features, Services, Testimonials, Events, Newsletter, FAQ, Team, About -->
-
     <section class="features fade-in">
       <h2>Why Choose Us?</h2>
       <div class="feature-box">
@@ -156,19 +153,19 @@
     </p>
   </footer>
 
-  <!-- Razorpay Script -->
+  <!-- Razorpay Payment Integration -->
   <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
   <script>
     document.getElementById('payBtn').onclick = function () {
       var options = {
-        key: "rzp_live_MJ22KqyMZUpKK9", // ✅ LIVE Razorpay Key
-        amount: 700, // ₹7 in paise
+        key: "rzp_live_MJ22KqyMZUpKK9", // ✅ Your Razorpay LIVE key
+        amount: 700, // ₹7 = 700 paise
         currency: "INR",
         name: "THE HIGH COURT",
         description: "Secure Payment",
         image: "assets/logo.png",
         handler: function (response) {
-          // Redirect to receipt page on success
+          // On success, go to receipt.html
           window.location.href = "receipt.html";
         },
         theme: {
@@ -180,7 +177,7 @@
     };
   </script>
 
-  <!-- Testimonials slider -->
+  <!-- Testimonial auto-slider -->
   <script>
     let index = 0;
     setInterval(() => {
