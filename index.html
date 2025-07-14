@@ -20,10 +20,12 @@
     <section class="hero fade-in">
       <h2>Make Secure Payments with Confidence</h2>
       <p>Instant, safe, and verified transactions through our Razorpay integration.</p>
-      <div class="qr-box">
-      </div>
+      <div class="qr-box"></div>
       <button id="payBtn" class="animated-btn">💳 Pay Now</button>
     </section>
+
+    <!-- Keep your same sections below (unchanged) -->
+    <!-- Features, Services, Testimonials, Events, Newsletter, FAQ, Team, About -->
 
     <section class="features fade-in">
       <h2>Why Choose Us?</h2>
@@ -154,23 +156,20 @@
     </p>
   </footer>
 
+  <!-- Razorpay Script -->
   <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
   <script>
     document.getElementById('payBtn').onclick = function () {
       var options = {
-        key: "rzp_test_G6Cq5wP6xN6qPU",
-        amount: 50000,
+        key: "rzp_live_MJ22KqyMZUpKK9", // ✅ LIVE Razorpay Key
+        amount: 700, // ₹7 in paise
         currency: "INR",
         name: "THE HIGH COURT",
         description: "Secure Payment",
         image: "assets/logo.png",
         handler: function (response) {
-          alert('✅ Payment successful!');
-        },
-        prefill: {
-          name: "",
-          email: "",
-          contact: ""
+          // Redirect to receipt page on success
+          window.location.href = "receipt.html";
         },
         theme: {
           color: "#2e2e2e"
@@ -179,8 +178,10 @@
       var rzp1 = new Razorpay(options);
       rzp1.open();
     };
+  </script>
 
-    // Testimonial auto-slider
+  <!-- Testimonials slider -->
+  <script>
     let index = 0;
     setInterval(() => {
       const testimonials = document.querySelectorAll('.testimonial');
